@@ -1,0 +1,31 @@
+{
+    "firstName": "Abhishek",
+    "middleName": "Kumar",
+    "lastName": "Singh",
+    "age": 23,
+    "email": "abhicoding8@gmail.com",
+    "github": "https://github.com/Abhi088",
+    "linkedin": "https://www.linkedin.com/in/abhi088",
+    "twitter": "",
+    "facebook": "",
+    "codeforces": "https://codeforces.com/profile/abhi088",
+    "hackerrank": "https://www.hackerrank.com/profile/AbhiKS",
+    "leetcode": "https://leetcode.com/AbhiKS/",
+    "experience": [
+        {
+            "company": "MyAnatomy Integration Pvt. Ltd.",
+            "role": "Software Developer",
+            "duration": "July 2023 - Present"
+        },
+        {
+            "company": "MyAnatomy Integration Pvt. Ltd.",
+            "role": "Full Stack Intern",
+            "duration": "March 2022 - June 2023"
+        },
+        {
+            "company": "DevsLane",
+            "role": "Tecnical Trainee",
+            "duration": "June 2021 - August 2021"
+        }
+    ]
+}

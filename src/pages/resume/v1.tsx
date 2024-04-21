@@ -78,18 +78,19 @@ export const ResumeV1 = () => {
         {
             degree: 'Bachelor of Technology in Computer Science & Engineering',
             institution: 'GLA University, Mathura',
-            duration: 'May 2023',
+            duration: 'June 2019 – May 2023',
+            cpi: '8.51/10',
         },
-        {
-            degree: 'Intermediate',
-            institution: 'Bhavan’s Kesari Devi Kanoria Vidya Mandir, Renukoot',
-            duration: 'May 2019',
-        },
-        {
-            degree: 'High School',
-            institution: 'Bhavan’s Kesari Devi Kanoria Vidya Mandir, Renukoot',
-            duration: 'May 2017',
-        },
+        // {
+        //     degree: 'Intermediate',
+        //     institution: 'Bhavan’s Kesari Devi Kanoria Vidya Mandir, Renukoot',
+        //     duration: 'May 2019',
+        // },
+        // {
+        //     degree: 'High School',
+        //     institution: 'Bhavan’s Kesari Devi Kanoria Vidya Mandir, Renukoot',
+        //     duration: 'May 2017',
+        // },
         // Add other education as needed
     ];
 
@@ -125,7 +126,7 @@ export const ResumeV1 = () => {
             </p>
 
             <div className="flex justify-center space-x-4">
-                <a href="https://portfolio.com" target="_blank" rel="noopener noreferrer" className="text-sm underline text-link">Portfolio</a>
+                {/* <a href="https://portfolio.com" target="_blank" rel="noopener noreferrer" className="text-sm underline text-link">Portfolio</a> */}
                 <a href="https://github.com/Abhi088" target="_blank" rel="noopener noreferrer" className="text-sm underline text-link">GitHub</a>
                 <a href="https://linkedin.com/in/abhi088" target="_blank" rel="noopener noreferrer" className="text-sm underline text-link">LinkedIn</a>
             </div>
@@ -202,7 +203,7 @@ export const ResumeV1 = () => {
                     <div key={index} className="mt-2">
                         <h4 className="text-xs flex justify-between text-black">
                             <span>
-                                <span className="italic">{edu.degree}</span>, &nbsp;
+                                <span className="italic"><b className="font-semibold">{edu.cpi}</b>, {edu.degree}</span>, &nbsp;
                                 <span>{edu.institution}</span>
                             </span>
                             <span>{edu.duration}</span>

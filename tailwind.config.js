@@ -13,6 +13,11 @@ module.exports = {
       },
       colors: {
         'link': '#1a73e8',
+        'background': '#dbdbdb',
+        'linkedin': '#0077b5',
+      },
+      fontFamily: {
+        'caveat': 'Caveat, cursive',
       }
     },
   },
