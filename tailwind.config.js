@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      maxHeight: {
+        '2/3-screen': '66vh', 
+      },
       height: {
         'a4': '297mm'
       },
