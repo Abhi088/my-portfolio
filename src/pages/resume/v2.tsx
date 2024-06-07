@@ -1,19 +1,16 @@
-import { ReactNode } from "react";
-import parse from 'html-react-parser';
-
-export const ResumeV1 = () => {
+export const ResumeV2 = () => {
     const technicalSkills = {
         languages: {
             displayName: 'Programming Languages',
             skills: ['Java', 'C++', 'TypeScript', 'JavaScript']
         },
-        libraries: {
-            displayName: 'Libraries/Frameworks',
-            skills: ['Express.js', 'Spring Boot', 'ReactJS', 'Angular', 'Redux', 'Redux Saga', 'Tailwind CSS', 'BootStrap']
-        },
         databases: {
             displayName: 'Databases',
             skills: ['MongoDB', 'PostgreSQL', 'MySQL']
+        },
+        libraries: {
+            displayName: 'Libraries/Frameworks',
+            skills: ['Express.js', 'Spring Boot', 'ReactJS', 'Angular', 'Redux', 'Redux Saga', 'Tailwind CSS', 'BootStrap']
         },
         versionControl: {
             displayName: 'Tools',
@@ -30,22 +27,16 @@ export const ResumeV1 = () => {
                     role: 'Software Developer',
                     duration: 'July 2023 – present',
                     responsibilities: [
-                        'Played a vital role in the development of <b>MAPIT</b>, a proprietary hiring assessment tool, contributing significantly to the increase in candidate screening efficiency.',
-                        'Engineered a highly intuitive <b>Angular</b>-based interface for <b>candidate reports</b> and <b>skill libraries<b>, reducing onboarding time by 25%.',
-                        'Leveraged <b>Java</b> framework and <b>PostgreSQL</b> to architect backend workflows for key features like <b>Marketplace</b>, <b>Admin Role Management</b>, <b>Video Resume</b> and <b>Offline Question Downloads</b> achieving a 40% improvement in system response time.',
-                        'Contributed actively to code reviews and troubleshooting sessions, leading to a 20% reduction in production bugs.',
-                        'Designed a scalable schema structure for a unique feature, resulting in a 50% decrease in database query execution time.',
-                        'Implemented <b>RabbitMQ</b> to process bulk operations in batches, resulting in a 60% increase in processing speed.',
-                        'Introduced <b>Redis</b> cache to enhance data accessibility, resulting in a 45% reduction in data retrieval latency.',
-                        'Conducted vulnerability testing and resolved identified bugs, resulting in a 30% increase in website security rating.',
-                        'Utilized <b>GCP</b> instance with <b>NGINX</b> to deploy the company\'s website developed using <b>PHP</b> and <b>MySQL</b>, resulting in a 25% improvement in website loading speed and stability.'
+                        'Spearheaded the development of over 20 API endpoints, which facilitated a remarkable 30% increase in data exchange efficiency, consequently elevating platform functionality and user experience.',
+                        'Collaborated seamlessly within a cross-functional team to deliver 5 pivotal features, contributing to a notable 15% surge in user engagement and overall satisfaction.',
+                        'Mentored and coached 3 junior team members, fostering a supportive learning environment that led to an impressive 40% enhancement in their productivity and code quality.',
                     ],
                 },
                 {
                     role: 'Technical Intern',
                     duration: 'Mar 2022 – June 2023',
                     responsibilities: [
-                        'Contributed to the development of the company\'s proprietary product, MAPIT, a website designed to offer assessment tools for streamlining the hiring process.',
+                        // 'Contributed to the development of the company\'s proprietary product, MAPIT, a website designed to offer assessment tools for streamlining the hiring process.',
                         'Played a vital role in optimizing the tech stack by implementing Angular 13 for the front-end and leveraging the Maven Framework with PostgreSQL for the back-end, resulting in a significant 20% enhancement in application performance.',
                         'Received accolades for implementing UI designs, which substantially boosted user engagement metrics by 25%, showcasing a keen eye for design and user experience.',
                     ],
@@ -88,7 +79,7 @@ export const ResumeV1 = () => {
     ];
 
     const projects = [
-
+        
         {
             name: 'TutorSage',
             duration: 'Nov 2021 – Feb 2022',
@@ -131,20 +122,20 @@ export const ResumeV1 = () => {
                 <p className="text-xs">Experienced full-stack software developer proficient in both front-end and back-end development, consistently delivering high-quality work ahead of schedule.</p>
             </section> */}
 
-            <section className="skills mt-4">
-                <h3 className="text-base font-semibold text-black">Technical Skills</h3>
+            {/* <section className="skills mt-4 */}
+                {/* <h3 className="text-base font-semibold text-black">Technical Skills</h3>
                 <hr className="mb-2 border-black border-t-1" />
                 {Object.entries(technicalSkills).map(([category, { displayName, skills }]) => (
                     <div key={category} className="flex items-baseline space-x-2">
                         <h4 className="text-xs font-semibold text-black">{displayName} - </h4>
                         <p className="text-xs">{skills.join(', ')}</p>
                     </div>
-                ))}
+                ))} */}
 
                 {/* <h3 className="text-base font-semibold text-black mt-2">Professional Skills</h3>
                 <hr className="mb-2 border-black border-t-1" />
                 <p className="text-xs">{professionalSkills.join(', ')}</p> */}
-            </section>
+            {/* </section> */}
 
             <section className="experience mt-4">
                 <h3 className="text-base font-semibold text-black">Experience</h3>
@@ -160,7 +151,7 @@ export const ResumeV1 = () => {
                                 </h5>
                                 <ul className="text-xs list-disc list-inside">
                                     {role.responsibilities.map((responsibility, index) => (
-                                        <Point key={index}>{responsibility}</Point>
+                                        <li key={index}>{responsibility}</li>
                                     ))}
                                 </ul>
                             </div>
@@ -207,14 +198,4 @@ export const ResumeV1 = () => {
             </section>
         </div>
     );
-}
-
-
-interface PointProps {
-    children: string,
-    key: number
-}
-
-const Point: React.FC<PointProps> = ({children, key}) => {
-    return <li key={key}>{parse(children)}</li>;
 }
